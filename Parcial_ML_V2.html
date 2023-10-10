@@ -1,0 +1,2198 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Parcial ML &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Parcial_ML_V2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Parcial Jose Montavlo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FParcial_ML_V2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Parcial_ML_V2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Parcial ML</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Parcial ML</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jose-montalvo">Jose Montalvo</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtrar-50-000-lineas-por-rendimiento-llevaba-aprox-20-min-por-modelo">Filtrar 50.000 lineas por rendimiento. llevaba aprox 20 min por modelo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-valor-de-auc-es-una-medida-que-nos-dice-cuan-bien-un-modelo-puede-distinguir-entre-dos-clases-diferentes-en-este-caso-entre-las-predicciones-correctas-y-las-incorrectas-cuanto-mas-alto-sea-el-valor-de-auc-mejor-sera-el-modelo-para-hacer-estas-distinciones">El valor de AUC es una medida que nos dice cuán bien un modelo puede distinguir entre dos clases diferentes, en este caso, entre las predicciones correctas y las incorrectas. Cuanto más alto sea el valor de AUC, mejor será el modelo para hacer estas distinciones.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-tiene-un-auc-promedio-del-mejor-modelo-es-0-849-estamos-diciendo-que-xgboost-es-el-mejor-para-hacer-estas-distinciones">XGBoost tiene un “AUC Promedio del mejor modelo es : 0.849”, estamos diciendo que XGBoost es el mejor para hacer estas distinciones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuanto-menor-sea-el-valor-del-rmse-mejor-sera-la-capacidad-del-modelo-para-hacer-predicciones-precisas-en-este-caso-un-rmse-promedio-de-0-9282">Cuanto menor sea el valor del RMSE, mejor será la capacidad del modelo para hacer predicciones precisas. En este caso, un RMSE Promedio de 0.9282</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esto-significa-que-en-promedio-las-predicciones-del-modelo-xgboost-tienen-un-error-de-aproximadamente-0-9282-unidades-en-la-variable-objetivo-en-este-caso-la-velocidad-del-viento-en-metros-por-segundo">esto significa que en promedio, las predicciones del modelo XGBoost tienen un error de aproximadamente 0.9282 unidades en la variable objetivo (en este caso, la velocidad del viento en metros por segundo).</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="parcial-ml">
+<h1>Parcial ML<a class="headerlink" href="#parcial-ml" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="jose-montalvo">
+<h1>Jose Montalvo<a class="headerlink" href="#jose-montalvo" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importar librerias necesarias</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">cross_val_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span><span class="p">,</span> <span class="n">roc_auc_score</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">roc_curve</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<p>Datos principales para la lectura del parcial</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df_test = pd.read_csv(&#39;C:/Users/a843931/OneDrive - Yara International ASA/Documents/Maestria analisis de dato/Parcial #1/Parcial ML maestria de datos/data_teste_dv_df_2011.csv&#39;)</span>
+<span class="n">df_traing_wind</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C:/Users/a843931/OneDrive - Yara International ASA/Documents/Maestria analisis de dato/Parcial #1/Parcial ML maestria de datos/data_treino_dv_df_2000_2010.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_traing_trans</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C:/Users/a843931/OneDrive - Yara International ASA/Documents/Maestria analisis de dato/Parcial #1/Parcial ML maestria de datos/train_transaction.csv&#39;</span><span class="p">)</span>
+<span class="n">df_traing_iden</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C:/Users/a843931/OneDrive - Yara International ASA/Documents/Maestria analisis de dato/Parcial #1/Parcial ML maestria de datos/train_identity.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_traing_trans</span><span class="o">.</span><span class="n">head</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method NDFrame.head of         TransactionID  isFraud  TransactionDT  TransactionAmt ProductCD  \
+0             2987000        0          86400           68.50         W   
+1             2987001        0          86401           29.00         W   
+2             2987002        0          86469           59.00         W   
+3             2987003        0          86499           50.00         W   
+4             2987004        0          86506           50.00         H   
+...               ...      ...            ...             ...       ...   
+590535        3577535        0       15811047           49.00         W   
+590536        3577536        0       15811049           39.50         W   
+590537        3577537        0       15811079           30.95         W   
+590538        3577538        0       15811088          117.00         W   
+590539        3577539        0       15811131          279.95         W   
+
+        card1  card2  card3       card4  card5  ... V330  V331  V332  V333  \
+0       13926    NaN  150.0    discover  142.0  ...  NaN   NaN   NaN   NaN   
+1        2755  404.0  150.0  mastercard  102.0  ...  NaN   NaN   NaN   NaN   
+2        4663  490.0  150.0        visa  166.0  ...  NaN   NaN   NaN   NaN   
+3       18132  567.0  150.0  mastercard  117.0  ...  NaN   NaN   NaN   NaN   
+4        4497  514.0  150.0  mastercard  102.0  ...  0.0   0.0   0.0   0.0   
+...       ...    ...    ...         ...    ...  ...  ...   ...   ...   ...   
+590535   6550    NaN  150.0        visa  226.0  ...  NaN   NaN   NaN   NaN   
+590536  10444  225.0  150.0  mastercard  224.0  ...  NaN   NaN   NaN   NaN   
+590537  12037  595.0  150.0  mastercard  224.0  ...  NaN   NaN   NaN   NaN   
+590538   7826  481.0  150.0  mastercard  224.0  ...  NaN   NaN   NaN   NaN   
+590539  15066  170.0  150.0  mastercard  102.0  ...  NaN   NaN   NaN   NaN   
+
+        V334 V335 V336  V337  V338  V339  
+0        NaN  NaN  NaN   NaN   NaN   NaN  
+1        NaN  NaN  NaN   NaN   NaN   NaN  
+2        NaN  NaN  NaN   NaN   NaN   NaN  
+3        NaN  NaN  NaN   NaN   NaN   NaN  
+4        0.0  0.0  0.0   0.0   0.0   0.0  
+...      ...  ...  ...   ...   ...   ...  
+590535   NaN  NaN  NaN   NaN   NaN   NaN  
+590536   NaN  NaN  NaN   NaN   NaN   NaN  
+590537   NaN  NaN  NaN   NaN   NaN   NaN  
+590538   NaN  NaN  NaN   NaN   NaN   NaN  
+590539   NaN  NaN  NaN   NaN   NaN   NaN  
+
+[590540 rows x 394 columns]&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_traing_wind</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>HORA (UTC)</th>
+      <th>VENTO, DIREï¿½ï¿½O HORARIA (gr) (ï¿½ (gr))</th>
+      <th>VENTO, VELOCIDADE HORARIA (m/s)</th>
+      <th>UMIDADE REL. MAX. NA HORA ANT. (AUT) (%)</th>
+      <th>UMIDADE REL. MIN. NA HORA ANT. (AUT) (%)</th>
+      <th>TEMPERATURA Mï¿½XIMA NA HORA ANT. (AUT) (ï¿½C)</th>
+      <th>TEMPERATURA Mï¿½NIMA NA HORA ANT. (AUT) (ï¿½C)</th>
+      <th>UMIDADE RELATIVA DO AR, HORARIA (%)</th>
+      <th>PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)</th>
+      <th>PRECIPITAï¿½ï¿½O TOTAL, HORï¿½RIO (mm)</th>
+      <th>VENTO, RAJADA MAXIMA (m/s)</th>
+      <th>PRESSï¿½O ATMOSFERICA MAX.NA HORA ANT. (AUT) (mB)</th>
+      <th>PRESSï¿½O ATMOSFERICA MIN. NA HORA ANT. (AUT) (mB)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>12:00</td>
+      <td>0.809017</td>
+      <td>1.8</td>
+      <td>69.0</td>
+      <td>60.0</td>
+      <td>22.6</td>
+      <td>20.7</td>
+      <td>61.0</td>
+      <td>888.2</td>
+      <td>0.0</td>
+      <td>3.8</td>
+      <td>888.2</td>
+      <td>887.7</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>13:00</td>
+      <td>0.965926</td>
+      <td>2.7</td>
+      <td>62.0</td>
+      <td>55.0</td>
+      <td>24.2</td>
+      <td>22.5</td>
+      <td>55.0</td>
+      <td>888.4</td>
+      <td>0.0</td>
+      <td>4.7</td>
+      <td>888.4</td>
+      <td>888.2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>14:00</td>
+      <td>0.891007</td>
+      <td>2.0</td>
+      <td>56.0</td>
+      <td>50.0</td>
+      <td>25.5</td>
+      <td>24.3</td>
+      <td>51.0</td>
+      <td>888.1</td>
+      <td>0.0</td>
+      <td>4.9</td>
+      <td>888.4</td>
+      <td>888.1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>15:00</td>
+      <td>0.848048</td>
+      <td>2.5</td>
+      <td>52.0</td>
+      <td>44.0</td>
+      <td>27.4</td>
+      <td>25.0</td>
+      <td>44.0</td>
+      <td>887.4</td>
+      <td>0.0</td>
+      <td>5.8</td>
+      <td>888.1</td>
+      <td>887.4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>16:00</td>
+      <td>0.224951</td>
+      <td>2.4</td>
+      <td>50.0</td>
+      <td>43.0</td>
+      <td>27.1</td>
+      <td>25.5</td>
+      <td>46.0</td>
+      <td>886.5</td>
+      <td>0.0</td>
+      <td>5.8</td>
+      <td>887.4</td>
+      <td>886.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_traing_wind</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 87693 entries, 0 to 87692
+Data columns (total 13 columns):
+ #   Column                                                 Non-Null Count  Dtype  
+---  ------                                                 --------------  -----  
+ 0   HORA (UTC)                                             87693 non-null  object 
+ 1   VENTO, DIREï¿½ï¿½O HORARIA (gr) (ï¿½ (gr))             87693 non-null  float64
+ 2   VENTO, VELOCIDADE HORARIA (m/s)                        87693 non-null  float64
+ 3   UMIDADE REL. MAX. NA HORA ANT. (AUT) (%)               87693 non-null  float64
+ 4   UMIDADE REL. MIN. NA HORA ANT. (AUT) (%)               87693 non-null  float64
+ 5   TEMPERATURA Mï¿½XIMA NA HORA ANT. (AUT) (ï¿½C)         87693 non-null  float64
+ 6   TEMPERATURA Mï¿½NIMA NA HORA ANT. (AUT) (ï¿½C)         87693 non-null  float64
+ 7   UMIDADE RELATIVA DO AR, HORARIA (%)                    87693 non-null  float64
+ 8   PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)  87693 non-null  float64
+ 9   PRECIPITAï¿½ï¿½O TOTAL, HORï¿½RIO (mm)                 87693 non-null  float64
+ 10  VENTO, RAJADA MAXIMA (m/s)                             87693 non-null  float64
+ 11  PRESSï¿½O ATMOSFERICA MAX.NA HORA ANT. (AUT) (mB)      87693 non-null  float64
+ 12  PRESSï¿½O ATMOSFERICA MIN. NA HORA ANT. (AUT) (mB)     87693 non-null  float64
+dtypes: float64(12), object(1)
+memory usage: 8.7+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Renombres de algunas columas para los datos de Wind speed</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_traing_wind</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+            <span class="s1">&#39;VIENTO, DIRECCION HORARIA&#39;</span><span class="p">:</span><span class="s1">&#39;DIRECCION VIENTO POR HORA&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;VENTO, DIREï¿½ï¿½O HORARIA (gr) (ï¿½ (gr))&#39;</span><span class="p">:</span><span class="s1">&#39;DIRECCION DEL VIENTE HORARIA&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;VENTO, VELOCIDADE HORARIA (m/s)&#39;</span><span class="p">:</span><span class="s1">&#39;VEL_VIENTO&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;TEMPERATURA Mï¿½XIMA NA HORA ANT. (AUT) (ï¿½C)&#39;</span><span class="p">:</span><span class="s1">&#39;TEMPERATURA MAX POR HORA&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;TEMPERATURA Mï¿½NIMA NA HORA ANT. (AUT) (ï¿½C)&#39;</span><span class="p">:</span><span class="s1">&#39;TEMPERATURA MIN POR HORA&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;PRECIPITAÃ¯Â¿Â½Ã¯Â¿Â½O TOTAL, HORÃ¯Â¿Â½RIO (mm)&#39;</span><span class="p">:</span><span class="s1">&#39;PRECIPITACION TOTAL POR HORA&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO&#39;</span><span class="p">:</span><span class="s1">&#39;PRES ATM DE ESTACION&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;PRECIPITAï¿½ï¿½O TOTAL, HORï¿½RIO (mm)&#39;</span><span class="p">:</span><span class="s1">&#39;PRECIPITACION TOTAL POR HORA&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;PRESSï¿½O ATMOSFERICA MAX.NA HORA ANT. (AUT) (mB)&#39;</span><span class="p">:</span><span class="s1">&#39;PESS ATM MAX POR HORA&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;PRESSï¿½O ATMOSFERICA MIN. NA HORA ANT. (AUT) (mB)&#39;</span><span class="p">:</span><span class="s1">&#39;PRESS ATM MIN POR HORA&#39;</span>
+            <span class="p">},</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_traing_trans</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;TransactionID&#39;, &#39;isFraud&#39;, &#39;TransactionDT&#39;, &#39;TransactionAmt&#39;,
+       &#39;ProductCD&#39;, &#39;card1&#39;, &#39;card2&#39;, &#39;card3&#39;, &#39;card4&#39;, &#39;card5&#39;,
+       ...
+       &#39;V330&#39;, &#39;V331&#39;, &#39;V332&#39;, &#39;V333&#39;, &#39;V334&#39;, &#39;V335&#39;, &#39;V336&#39;, &#39;V337&#39;, &#39;V338&#39;,
+       &#39;V339&#39;],
+      dtype=&#39;object&#39;, length=394)
+</pre></div>
+</div>
+</div>
+</div>
+<p>#Analisis exploratorio de los datos de Wind speed</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_traing_wind</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>DIRECCION DEL VIENTE HORARIA</th>
+      <td>87693.0</td>
+      <td>0.405810</td>
+      <td>0.686247</td>
+      <td>-1.0</td>
+      <td>-0.156434</td>
+      <td>0.788011</td>
+      <td>0.970296</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>VEL_VIENTO</th>
+      <td>87693.0</td>
+      <td>2.466192</td>
+      <td>1.313968</td>
+      <td>0.0</td>
+      <td>1.500000</td>
+      <td>2.400000</td>
+      <td>3.400000</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>UMIDADE REL. MAX. NA HORA ANT. (AUT) (%)</th>
+      <td>87693.0</td>
+      <td>69.058465</td>
+      <td>19.640222</td>
+      <td>12.0</td>
+      <td>54.000000</td>
+      <td>72.000000</td>
+      <td>87.000000</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>UMIDADE REL. MIN. NA HORA ANT. (AUT) (%)</th>
+      <td>87693.0</td>
+      <td>63.176194</td>
+      <td>20.166336</td>
+      <td>10.0</td>
+      <td>48.000000</td>
+      <td>64.000000</td>
+      <td>80.000000</td>
+      <td>98.0</td>
+    </tr>
+    <tr>
+      <th>TEMPERATURA MAX POR HORA</th>
+      <td>87693.0</td>
+      <td>21.921264</td>
+      <td>3.721386</td>
+      <td>9.2</td>
+      <td>19.200000</td>
+      <td>21.400000</td>
+      <td>24.700000</td>
+      <td>35.3</td>
+    </tr>
+    <tr>
+      <th>TEMPERATURA MIN POR HORA</th>
+      <td>87693.0</td>
+      <td>20.684570</td>
+      <td>3.513744</td>
+      <td>8.4</td>
+      <td>18.400000</td>
+      <td>20.200000</td>
+      <td>23.100000</td>
+      <td>34.4</td>
+    </tr>
+    <tr>
+      <th>UMIDADE RELATIVA DO AR, HORARIA (%)</th>
+      <td>87693.0</td>
+      <td>66.146682</td>
+      <td>19.992327</td>
+      <td>10.0</td>
+      <td>51.000000</td>
+      <td>68.000000</td>
+      <td>84.000000</td>
+      <td>99.0</td>
+    </tr>
+    <tr>
+      <th>PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)</th>
+      <td>87693.0</td>
+      <td>887.251925</td>
+      <td>4.012404</td>
+      <td>863.4</td>
+      <td>885.300000</td>
+      <td>887.200000</td>
+      <td>889.100000</td>
+      <td>1023.5</td>
+    </tr>
+    <tr>
+      <th>PRECIPITACION TOTAL POR HORA</th>
+      <td>87693.0</td>
+      <td>0.160907</td>
+      <td>1.307515</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>70.8</td>
+    </tr>
+    <tr>
+      <th>VENTO, RAJADA MAXIMA (m/s)</th>
+      <td>87693.0</td>
+      <td>5.161076</td>
+      <td>2.311157</td>
+      <td>0.0</td>
+      <td>3.400000</td>
+      <td>5.000000</td>
+      <td>6.800000</td>
+      <td>24.3</td>
+    </tr>
+    <tr>
+      <th>PESS ATM MAX POR HORA</th>
+      <td>87693.0</td>
+      <td>887.580724</td>
+      <td>3.646750</td>
+      <td>865.3</td>
+      <td>885.600000</td>
+      <td>887.500000</td>
+      <td>889.300000</td>
+      <td>913.1</td>
+    </tr>
+    <tr>
+      <th>PRESS ATM MIN POR HORA</th>
+      <td>87693.0</td>
+      <td>886.891093</td>
+      <td>3.564539</td>
+      <td>862.8</td>
+      <td>885.000000</td>
+      <td>886.900000</td>
+      <td>888.800000</td>
+      <td>910.9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Dare un resumen de la interpretacion que se puede obtener la informacion suministrada de la tabla wind speed referente a la columna DIRECCION DEL VIENTE HORARIA</p>
+<ul class="simple">
+<li><p>count: Este valor indica la cantidad de observaciones o datos que se tienen para la variable “DIRECCION DEL VIENTE HORARIA”. En este caso, hay 87,693 observaciones disponibles para esta variable.</p></li>
+<li><p>mean: La media (o promedio) de la variable. En este caso, la media es aproximadamente 0.405810.</p></li>
+<li><p>std: La desviación estándar de la variable, que mide la dispersión de los datos. En este caso, la desviación estándar es aproximadamente 0.686247.</p></li>
+<li><p>min: El valor mínimo observado en la variable. Aquí, el valor mínimo es -1.0.</p></li>
+<li><p>25%: El percentil 25 o el primer cuartil. Indica el valor por debajo del cual se encuentra el 25% de las observaciones. En este caso, el valor del primer cuartil es aproximadamente -0.156434.</p></li>
+<li><p>50%: El percentil 50 o la mediana. Representa el valor que separa la mitad inferior y superior de las observaciones cuando están ordenadas. En este caso, la mediana es aproximadamente 0.788011.</p></li>
+<li><p>75%: El percentil 75 o el tercer cuartil. Indica el valor por debajo del cual se encuentra el 75% de las observaciones. Aquí, el valor del tercer cuartil es aproximadamente 0.970296.</p></li>
+<li><p>max: El valor máximo observado en la variable. En este caso, el valor máximo es 1.0.</p></li>
+</ul>
+<p>Estas estadísticas resumen la distribución de la variable “DIRECCION DEL VIENTO HORARIA” y proporcionan información sobre su tendencia central, dispersión y valores extremos.
+Por ejemplo, podemos ver que la media es positiva, lo que sugiere una tendencia general hacia valores positivos en esta variable. También puedes observar que los valores oscilan entre -1.0 y 1.0.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat_cols</span><span class="o">=</span><span class="n">df_traing_wind</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;object&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">num_cols</span> <span class="o">=</span> <span class="n">df_traing_wind</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">font_scale</span><span class="o">=</span><span class="mf">1.4</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">num_cols</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Column: &#39;</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Skew:&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">df_traing_wind</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">(),</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kurtosis: &#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">df_traing_wind</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">kurtosis</span><span class="p">(),</span> <span class="mi">2</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">df_traing_wind</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_traing_wind</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column:  DIRECCION DEL VIENTE HORARIA
+Skew: -0.86
+Kurtosis:  -0.82
+</pre></div>
+</div>
+<img alt="_images/b3c1b7df603b794f08297e33dc3859b31f06de1e61fde71b28b73260071e3402.png" src="_images/b3c1b7df603b794f08297e33dc3859b31f06de1e61fde71b28b73260071e3402.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column:  VEL_VIENTO
+Skew: 0.37
+Kurtosis:  -0.11
+</pre></div>
+</div>
+<img alt="_images/4d5778468dab9c96cb3d4685a471caa10abcae3acde1f2507602082a93b6c32e.png" src="_images/4d5778468dab9c96cb3d4685a471caa10abcae3acde1f2507602082a93b6c32e.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column:  UMIDADE REL. MAX. NA HORA ANT. (AUT) (%)
+Skew: -0.48
+Kurtosis:  -0.78
+</pre></div>
+</div>
+<img alt="_images/64c85eab9e540b8e93e100a80ac0e158f4af6899c3de9ca6c490fad7778ce9ca.png" src="_images/64c85eab9e540b8e93e100a80ac0e158f4af6899c3de9ca6c490fad7778ce9ca.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column:  UMIDADE REL. MIN. NA HORA ANT. (AUT) (%)
+Skew: -0.23
+Kurtosis:  -0.96
+</pre></div>
+</div>
+<img alt="_images/bb04b587e2d3f95fd41ac318cefc2329be19fe46950ae410be5aebb93d28d20d.png" src="_images/bb04b587e2d3f95fd41ac318cefc2329be19fe46950ae410be5aebb93d28d20d.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column:  TEMPERATURA MAX POR HORA
+Skew: 0.26
+Kurtosis:  -0.42
+</pre></div>
+</div>
+<img alt="_images/3b2367e547694a84636230fd90f031189859ee91f25da99fa7cb38eac5885f27.png" src="_images/3b2367e547694a84636230fd90f031189859ee91f25da99fa7cb38eac5885f27.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column:  TEMPERATURA MIN POR HORA
+Skew: 0.24
+Kurtosis:  -0.12
+</pre></div>
+</div>
+<img alt="_images/1fe0024584dbdbb8dcbcf0661b5dc10f2ca0167f63e19635b6a0dd1b3eacdc49.png" src="_images/1fe0024584dbdbb8dcbcf0661b5dc10f2ca0167f63e19635b6a0dd1b3eacdc49.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column:  UMIDADE RELATIVA DO AR, HORARIA (%)
+Skew: -0.35
+Kurtosis:  -0.89
+</pre></div>
+</div>
+<img alt="_images/6f7b156dfb3dabab31d87355558553dd282df9c30949a398c80de49e1fe7aedb.png" src="_images/6f7b156dfb3dabab31d87355558553dd282df9c30949a398c80de49e1fe7aedb.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column:  PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)
+Skew: 6.18
+Kurtosis:  179.64
+</pre></div>
+</div>
+<img alt="_images/2ffefa386b4f94c88710a11d360d99a50928fd78f531264a1c0f892e3cfa3af8.png" src="_images/2ffefa386b4f94c88710a11d360d99a50928fd78f531264a1c0f892e3cfa3af8.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column:  PRECIPITACION TOTAL POR HORA
+Skew: 17.65
+Kurtosis:  476.4
+</pre></div>
+</div>
+<img alt="_images/ed5f33259304e6acad3e93e7ffba693dc2381716e8edf01b24d19cddb3337dd2.png" src="_images/ed5f33259304e6acad3e93e7ffba693dc2381716e8edf01b24d19cddb3337dd2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column:  VENTO, RAJADA MAXIMA (m/s)
+Skew: 0.41
+Kurtosis:  0.11
+</pre></div>
+</div>
+<img alt="_images/d5fd5568f32552a6948f159d2e334cc07719dd63c1fcf510f2f284ada52f02dc.png" src="_images/d5fd5568f32552a6948f159d2e334cc07719dd63c1fcf510f2f284ada52f02dc.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column:  PESS ATM MAX POR HORA
+Skew: 1.02
+Kurtosis:  5.82
+</pre></div>
+</div>
+<img alt="_images/d696c6cebb33766adf4ef3b6432b3670c72481c6a4ed25ea6e2c19b95ff266b2.png" src="_images/d696c6cebb33766adf4ef3b6432b3670c72481c6a4ed25ea6e2c19b95ff266b2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Column:  PRESS ATM MIN POR HORA
+Skew: 0.33
+Kurtosis:  4.91
+</pre></div>
+</div>
+<img alt="_images/8932ea0dd5a265c65df3bfb71f2e919a616222cbfaad43a2d5bb1e54edf09bb3.png" src="_images/8932ea0dd5a265c65df3bfb71f2e919a616222cbfaad43a2d5bb1e54edf09bb3.png" />
+</div>
+</div>
+<p>con la interpretacion que nos brinda los ostograma son las frecuencia en que se encuentran los valores de las columnas, y el diagrama de caja es clave para los conjuntos de datos.
+Los “bigotes” que se extienden desde el cuadro indican la variabilidad de los datos más allá del rango intercuartílico. Los valores atípicos se muestran como puntos individuales más allá de los bigotes.</p>
+<p>Esto quiere decir:</p>
+<p>Histograma de Velocidad del Viento (0 a 4):</p>
+<ul class="simple">
+<li><p>El histograma representa con qué frecuencia se observan velocidades del viento en el rango de 0 a 4 metros por segundo.</p></li>
+<li><p>Muestra cuántas horas experimentan ciertos niveles de velocidad del viento en ese intervalo.</p></li>
+</ul>
+<p>Diagrama de Caja de Velocidad del Viento (Sesgado hacia la Izquierda):</p>
+<ul class="simple">
+<li><p>El diagrama de caja resalta las estadísticas principales de las velocidades del viento en el rango de 0 a 4 metros por segundo.</p></li>
+<li><p>La distribución sesgada hacia la izquierda sugiere que la mayoría de las observaciones de velocidad del viento están en el extremo más bajo del rango.</p></li>
+<li><p>La mediana se encuentra en el lado izquierdo de la caja, indicando una tendencia hacia velocidades del viento más bajas.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlation_matrix</span> <span class="o">=</span> <span class="n">df_traing_wind</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">correlation_matrix</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.2f&quot;</span><span class="p">)</span> 
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">correlation_matrix</span> <span class="o">=</span> <span class="n">df_traing_wind</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">correlation_matrix</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.2f&quot;</span><span class="p">)</span> 
+
+<span class="nn">File c:\Users\a843931\AppData\Local\miniconda3\envs\ml_venv\lib\site-packages\pandas\core\frame.py:10707,</span> in <span class="ni">DataFrame.corr</span><span class="nt">(self, method, min_periods, numeric_only)</span>
+<span class="g g-Whitespace">  </span><span class="mi">10705</span> <span class="n">cols</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">columns</span>
+<span class="g g-Whitespace">  </span><span class="mi">10706</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">cols</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="ne">&gt; </span><span class="mi">10707</span> <span class="n">mat</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">na_value</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">  </span><span class="mi">10709</span> <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;pearson&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">  </span><span class="mi">10710</span>     <span class="n">correl</span> <span class="o">=</span> <span class="n">libalgos</span><span class="o">.</span><span class="n">nancorr</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">minp</span><span class="o">=</span><span class="n">min_periods</span><span class="p">)</span>
+
+<span class="nn">File c:\Users\a843931\AppData\Local\miniconda3\envs\ml_venv\lib\site-packages\pandas\core\frame.py:1892,</span> in <span class="ni">DataFrame.to_numpy</span><span class="nt">(self, dtype, copy, na_value)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1890</span> <span class="k">if</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1891</span>     <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1892</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgr</span><span class="o">.</span><span class="n">as_array</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="n">copy</span><span class="p">,</span> <span class="n">na_value</span><span class="o">=</span><span class="n">na_value</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1893</span> <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">dtype</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1894</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nn">File c:\Users\a843931\AppData\Local\miniconda3\envs\ml_venv\lib\site-packages\pandas\core\internals\managers.py:1656,</span> in <span class="ni">BlockManager.as_array</span><span class="nt">(self, dtype, copy, na_value)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1654</span>         <span class="n">arr</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">writeable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="g g-Whitespace">   </span><span class="mi">1655</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1656</span>     <span class="n">arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interleave</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">na_value</span><span class="o">=</span><span class="n">na_value</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1657</span>     <span class="c1"># The underlying data was copied within _interleave, so no need</span>
+<span class="g g-Whitespace">   </span><span class="mi">1658</span>     <span class="c1"># to further copy if copy=True or setting na_value</span>
+<span class="g g-Whitespace">   </span><span class="mi">1660</span> <span class="k">if</span> <span class="n">na_value</span> <span class="ow">is</span> <span class="n">lib</span><span class="o">.</span><span class="n">no_default</span><span class="p">:</span>
+
+<span class="nn">File c:\Users\a843931\AppData\Local\miniconda3\envs\ml_venv\lib\site-packages\pandas\core\internals\managers.py:1715,</span> in <span class="ni">BlockManager._interleave</span><span class="nt">(self, dtype, na_value)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1713</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1714</span>         <span class="n">arr</span> <span class="o">=</span> <span class="n">blk</span><span class="o">.</span><span class="n">get_values</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1715</span>     <span class="n">result</span><span class="p">[</span><span class="n">rl</span><span class="o">.</span><span class="n">indexer</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span>
+<span class="g g-Whitespace">   </span><span class="mi">1716</span>     <span class="n">itemmask</span><span class="p">[</span><span class="n">rl</span><span class="o">.</span><span class="n">indexer</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="g g-Whitespace">   </span><span class="mi">1718</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">itemmask</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+
+<span class="ne">ValueError</span>: could not convert string to float: &#39;12:00&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Gracias a la matriz de correlacion podemos identificar cuales columnas estan correlacionadas entre si, como afectan las unas con las otras, asi nos ayudaremos a identiricar con que columas se nos haria mas util trabajar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_traing_wind</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;HORA (UTC)&#39;, &#39;DIRECCION DEL VIENTE HORARIA&#39;, &#39;VEL_VIENTO&#39;,
+       &#39;UMIDADE REL. MAX. NA HORA ANT. (AUT) (%)&#39;,
+       &#39;UMIDADE REL. MIN. NA HORA ANT. (AUT) (%)&#39;, &#39;TEMPERATURA MAX POR HORA&#39;,
+       &#39;TEMPERATURA MIN POR HORA&#39;, &#39;UMIDADE RELATIVA DO AR, HORARIA (%)&#39;,
+       &#39;PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB)&#39;,
+       &#39;PRECIPITACION TOTAL POR HORA&#39;, &#39;VENTO, RAJADA MAXIMA (m/s)&#39;,
+       &#39;PESS ATM MAX POR HORA&#39;, &#39;PRESS ATM MIN POR HORA&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_traing_wind</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;VEL_VIENTO&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;VENTO, RAJADA MAXIMA (m/s)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;VEL_VIENTO&#39;, ylabel=&#39;VENTO, RAJADA MAXIMA (m/s)&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/7b1cbd6578bfce91e7691d757162beda3ed9dc5aadccc495bbcac5cc0232d3df.png" src="_images/7b1cbd6578bfce91e7691d757162beda3ed9dc5aadccc495bbcac5cc0232d3df.png" />
+</div>
+</div>
+<p>Podemos identificar por medio de la matriz de correlacion cuales son esas variales que estan altamente correlacionasas entre si , esto quiere decir que para este grafico son directamente proporcial una con la otra.
+si una aumente la otra tambien como se evidencia en la grafica.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_traing_wind</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;UMIDADE REL. MIN. NA HORA ANT. (AUT) (%)&quot;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s2">&quot;TEMPERATURA MAX POR HORA&quot;</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s2">&quot;HORA (UTC)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;UMIDADE REL. MIN. NA HORA ANT. (AUT) (%)&#39;, ylabel=&#39;TEMPERATURA MAX POR HORA&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/6ea3af2103692809adf4e3b35e1d79f3ceb9872e2b148fe09866c2181fecf720.png" src="_images/6ea3af2103692809adf4e3b35e1d79f3ceb9872e2b148fe09866c2181fecf720.png" />
+</div>
+</div>
+<p>Por medio grafico podemos identificar que para estas dos columnas son invernsamente proporcinal entre ellas, indicando si una de ella aumenta la otra se vera afectada en sentido a la direccion de la columna anterior.
+es decir al disminuir la tempreratura max , la humedad aumentara, y viseversa</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_traing_wind</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;VEL_VIENTO&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;HORA (UTC)&quot;</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribución del horas vs velocidad del tiempo&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Velocidad del viento&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Horas en el dia&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/8479ba77a7ff3cb72378e357dbfa040ea977634de762ec519106d7b654a49872.png" src="_images/8479ba77a7ff3cb72378e357dbfa040ea977634de762ec519106d7b654a49872.png" />
+</div>
+</div>
+<p>Por medio del grafico de caja podemos identificar que el las velocidades con mayor registro son entre 1 y 4 anotanos en el transcurso del dia.
+Tambien nos ayuda a identficar los valores atipicos registrados en las horas registradas, son velocidades que no son muy frecuentes en las horas registradas.</p>
+<p>Haremos varios graficos generalizando los resultado</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df_traing_wind</span><span class="p">,</span> <span class="n">markers</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x21401464070&gt;
+</pre></div>
+</div>
+<img alt="_images/68aa973a1917e65ba6a2b5e63c022249914d88c718a7c6ffdfc0220803c9d5aa.png" src="_images/68aa973a1917e65ba6a2b5e63c022249914d88c718a7c6ffdfc0220803c9d5aa.png" />
+</div>
+</div>
+<p>merge entre tablas</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_merge</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_traing_trans</span> <span class="p">,</span> <span class="n">df_traing_iden</span><span class="p">,</span><span class="n">on</span> <span class="o">=</span> <span class="s2">&quot;TransactionID&quot;</span> <span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ejercicio # 5</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Ridge</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">f1_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">import</span> <span class="nn">xgboost</span> <span class="k">as</span> <span class="nn">xgb</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.neural_network</span> <span class="kn">import</span> <span class="n">MLPClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">precision_recall_fscore_support</span><span class="p">,</span> <span class="n">roc_auc_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Selecionamos los valores numericos para la clasificiacion de los modelos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># se realizo una limpieza de los valores con un lumbrar menos a 80% de nulos</span>
+<span class="n">porcentaje_nulos</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_traing_trans</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_traing_iden</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="n">columnas_a_eliminar</span> <span class="o">=</span> <span class="n">porcentaje_nulos</span><span class="p">[</span><span class="n">porcentaje_nulos</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">]</span><span class="o">.</span><span class="n">index</span>
+
+<span class="n">df_traing_trans_sin_null</span> <span class="o">=</span> <span class="n">df_traing_trans</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">columnas_a_eliminar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Eliminar valores null para un mejor procesamiento</span>
+<span class="n">df_trans_limpio</span> <span class="o">=</span><span class="n">df_traing_trans_sin_null</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se trabaja con valores numericos</span>
+<span class="n">df_merge_numerico</span> <span class="o">=</span> <span class="n">df_trans_limpio</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number&#39;</span><span class="p">])</span>
+<span class="c1">#df_merge_numerico = df_merge_numerico.dropna()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="filtrar-50-000-lineas-por-rendimiento-llevaba-aprox-20-min-por-modelo">
+<h2>Filtrar 50.000 lineas por rendimiento. llevaba aprox 20 min por modelo<a class="headerlink" href="#filtrar-50-000-lineas-por-rendimiento-llevaba-aprox-20-min-por-modelo" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_filas_a_filtrar</span> <span class="o">=</span> <span class="mi">20000</span>
+<span class="n">df_filtrado</span> <span class="o">=</span> <span class="n">df_merge_numerico</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">num_filas_a_filtrar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">df_merge_numerico</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;isFraud&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df_merge_numerico</span><span class="p">[</span><span class="s1">&#39;isFraud&#39;</span><span class="p">]</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">df_filtrado</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;isFraud&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df_filtrado</span><span class="p">[</span><span class="s1">&#39;isFraud&#39;</span><span class="p">]</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="c1"># Inicializar el clasificador K-NN</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">()</span>
+
+<span class="c1"># Crear un pipeline con escalado de características</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>  <span class="c1"># Escalar características</span>
+    <span class="p">(</span><span class="s1">&#39;classifier&#39;</span><span class="p">,</span> <span class="n">clf</span><span class="p">)</span>  <span class="c1"># Clasificador K-NN</span>
+<span class="p">])</span>
+
+<span class="c1"># Definir los hiperparámetros a ajustar en GridSearchCV para K-NN</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;classifier__n_neighbors&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>   <span class="c1"># Hiperparámetro del K-NN</span>
+    <span class="s1">&#39;classifier__weights&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;uniform&#39;</span><span class="p">,</span> <span class="s1">&#39;distance&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1"># Configurar GridSearchCV con validación cruzada</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;roc_auc&#39;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Ajustar el modelo</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Obtener las mejores métricas y el mejor modelo</span>
+<span class="n">best_clf</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">best_estimator_</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">best_clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">y_pred_prob</span> <span class="o">=</span> <span class="n">best_clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1">#Calcular matriz de confuion</span>
+<span class="n">confusion</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
+
+<span class="c1"># Métricas de rendimiento</span>
+<span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">f1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">precision_recall_fscore_support</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span><span class="p">)</span>
+<span class="n">auc_score_KNN</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_prob</span><span class="p">)</span>
+
+<span class="c1"># Imprimir las métricas</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriz de Confusión:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mejor Modelo K-NN&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Precisión: </span><span class="si">{</span><span class="n">precision</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Recall: </span><span class="si">{</span><span class="n">recall</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;F1-Score: </span><span class="si">{</span><span class="n">f1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AUC: </span><span class="si">{</span><span class="n">auc_score_KNN</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriz de Confusión:
+[[3900    2]
+ [  88   10]]
+Mejor Modelo K-NN
+Precisión: 0.8333333333333334
+Recall: 0.10204081632653061
+F1-Score: 0.18181818181818182
+AUC: 0.6558149143819495
+</pre></div>
+</div>
+</div>
+</div>
+<p>#Para el modelo de Ridge no se puede utilizar estos parametros ya que la columna de fraude es binario por tal motivo no se puede predecir valores numéricos continuos en función de características numéricas</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+
+<span class="c1"># Inicializar el clasificador Regresión Logística</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+
+<span class="c1"># Crear un pipeline con escalado de características</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>  <span class="c1"># Escalar características</span>
+    <span class="p">(</span><span class="s1">&#39;classifier&#39;</span><span class="p">,</span> <span class="n">clf</span><span class="p">)</span>  <span class="c1"># Clasificador Regresión Logística</span>
+<span class="p">])</span>
+
+<span class="c1"># Definir los hiperparámetros a ajustar en GridSearchCV para Regresión Logística</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;classifier__C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>  <span class="c1"># Parámetro de regularización C</span>
+<span class="p">}</span>
+
+<span class="c1"># Configurar GridSearchCV con validación cruzada</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;roc_auc&#39;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Ajustar el modelo</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Obtener las mejores métricas y el mejor modelo</span>
+<span class="n">best_clf</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">best_estimator_</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">best_clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">y_pred_prob</span> <span class="o">=</span> <span class="n">best_clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1">#Calcular matriz de confuion</span>
+<span class="n">confusion</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
+
+<span class="c1"># Métricas de rendimiento</span>
+<span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">f1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">precision_recall_fscore_support</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span><span class="p">)</span>
+<span class="n">auc_score_Lasso</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_prob</span><span class="p">)</span>
+
+<span class="c1"># Imprimir las métricas</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriz de Confusión:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mejor Modelo Regresión Logística&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Precisión: </span><span class="si">{</span><span class="n">precision</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Recall: </span><span class="si">{</span><span class="n">recall</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;F1-Score: </span><span class="si">{</span><span class="n">f1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AUC: </span><span class="si">{</span><span class="n">auc_score_Lasso</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriz de Confusión:
+[[3899    3]
+ [  97    1]]
+Mejor Modelo Regresión Logística
+Precisión: 0.25
+Recall: 0.01020408163265306
+F1-Score: 0.019607843137254898
+AUC: 0.7051642799610874
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+
+<span class="c1"># Inicializar el clasificador Bayes</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+
+<span class="c1"># Crear un pipeline con escalado de características</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>  <span class="c1"># Escalar características</span>
+    <span class="p">(</span><span class="s1">&#39;classifier&#39;</span><span class="p">,</span> <span class="n">clf</span><span class="p">)</span>  <span class="c1"># Clasificador Naive Bayes</span>
+<span class="p">])</span>
+
+<span class="c1"># (No se ajustan hiperparámetros en Naive Bayes por defecto)</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># no hay hiperparámetros específicos para ajustar en GaussianNB (Naive Bayes Gaussiano) es que este algoritmo de clasificación </span>
+    <span class="c1"># no tiene parámetros que se puedan optimizar de la misma manera que otros algoritmos, como K-Nearest Neighbors (K-NN) o Support Vector Machine (SVM).</span>
+<span class="p">}</span>
+
+<span class="c1"># Configurar GridSearchCV con validación cruzada</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;roc_auc&#39;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Ajustar el modelo</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Obtener las mejores métricas y el mejor modelo</span>
+<span class="n">best_clf</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">best_estimator_</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">best_clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">y_pred_prob</span> <span class="o">=</span> <span class="n">best_clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1">#Calcular matriz de confuion</span>
+<span class="n">confusion</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
+
+<span class="c1"># Métricas de rendimiento</span>
+<span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">f1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">precision_recall_fscore_support</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span><span class="p">)</span>
+<span class="n">auc_score_Bayes</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_prob</span><span class="p">)</span>
+
+<span class="c1"># Imprimir las métricas</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriz de Confusión:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mejor Modelo Naive Bayes&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Precisión: </span><span class="si">{</span><span class="n">precision</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Recall: </span><span class="si">{</span><span class="n">recall</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;F1-Score: </span><span class="si">{</span><span class="n">f1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AUC: </span><span class="si">{</span><span class="n">auc_score_Bayes</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriz de Confusión:
+[[3539  363]
+ [  74   24]]
+Mejor Modelo Naive Bayes
+Precisión: 0.06201550387596899
+Recall: 0.24489795918367346
+F1-Score: 0.09896907216494845
+AUC: 0.6814558729693825
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xgboost</span> <span class="k">as</span> <span class="nn">xgb</span>
+
+<span class="c1"># Inicializar el clasificador XGBoost (XGBClassifier)</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">XGBClassifier</span><span class="p">()</span>
+
+<span class="c1"># Crear un pipeline con escalado de características</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>  <span class="c1"># Escalar características</span>
+    <span class="p">(</span><span class="s1">&#39;classifier&#39;</span><span class="p">,</span> <span class="n">clf</span><span class="p">)</span>  <span class="c1"># Clasificador XGBoost</span>
+<span class="p">])</span>
+
+<span class="c1"># Definir los hiperparámetros a ajustar en GridSearchCV para XGBoost</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;classifier__n_estimators&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>  <span class="c1"># Número de árboles (estimadores)</span>
+    <span class="s1">&#39;classifier__learning_rate&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>  <span class="c1"># Tasa de aprendizaje</span>
+<span class="p">}</span>
+
+<span class="c1"># Configurar GridSearchCV con validación cruzada</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;roc_auc&#39;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Ajustar el modelo</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Obtener las mejores métricas y el mejor modelo</span>
+<span class="n">best_clf</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">best_estimator_</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">best_clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">y_pred_prob</span> <span class="o">=</span> <span class="n">best_clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1">#Calcular matrix de confusion</span>
+<span class="n">confusion</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
+
+<span class="c1"># Métricas de rendimiento</span>
+<span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">f1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">precision_recall_fscore_support</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span><span class="p">)</span>
+<span class="n">auc_score_XGBoost</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_prob</span><span class="p">)</span>
+
+<span class="c1"># Imprimir las métricas</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriz de Confusión:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mejor Modelo XGBoost&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Precisión: </span><span class="si">{</span><span class="n">precision</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Recall: </span><span class="si">{</span><span class="n">recall</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;F1-Score: </span><span class="si">{</span><span class="n">f1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AUC: </span><span class="si">{</span><span class="n">auc_score_XGBoost</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriz de Confusión:
+[[3901    1]
+ [  71   27]]
+Mejor Modelo XGBoost
+Precisión: 0.9642857142857143
+Recall: 0.2755102040816326
+F1-Score: 0.4285714285714285
+AUC: 0.8492322095419409
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+
+
+<span class="c1"># Inicializar el clasificador SVC (Support Vector Classifier)</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">probability</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Usamos probability=True para calcular el AUC</span>
+
+<span class="c1"># Crear un pipeline con escalado de características</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>  <span class="c1"># Escalar características</span>
+    <span class="p">(</span><span class="s1">&#39;classifier&#39;</span><span class="p">,</span> <span class="n">clf</span><span class="p">)</span>  <span class="c1"># Clasificador SVM</span>
+<span class="p">])</span>
+
+<span class="c1"># Definir los hiperparámetros a ajustar en GridSearchCV para SVM</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;classifier__C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>  <span class="c1"># Parámetro de regularización C</span>
+    <span class="s1">&#39;classifier__kernel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="s1">&#39;rbf&#39;</span><span class="p">],</span>  <span class="c1"># Tipo de kernel</span>
+<span class="p">}</span>
+
+<span class="c1"># Configurar GridSearchCV con validación cruzada</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;roc_auc&#39;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Ajustar el modelo</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Obtener las mejores métricas y el mejor modelo</span>
+<span class="n">best_clf</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">best_estimator_</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">best_clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">y_pred_prob</span> <span class="o">=</span> <span class="n">best_clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1">#Calcular matriz de confucion</span>
+<span class="n">confusion</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
+
+<span class="c1"># Métricas de rendimiento</span>
+<span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">f1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">precision_recall_fscore_support</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span><span class="p">)</span>
+<span class="n">auc_score_SVC</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_prob</span><span class="p">)</span>
+
+<span class="c1"># Imprimir las métricas</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriz de Confusión:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mejor Modelo SVM&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Precisión: </span><span class="si">{</span><span class="n">precision</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Recall: </span><span class="si">{</span><span class="n">recall</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;F1-Score: </span><span class="si">{</span><span class="n">f1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AUC: </span><span class="si">{</span><span class="n">auc_score_SVC</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriz de Confusión:
+[[3902    0]
+ [  98    0]]
+Mejor Modelo SVM
+Precisión: 0.0
+Recall: 0.0
+F1-Score: 0.0
+AUC: 0.6863748574775888
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neural_network</span> <span class="kn">import</span> <span class="n">MLPClassifier</span>
+
+<span class="c1"># Inicializar el clasificador MLPClassifier</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">MLPClassifier</span><span class="p">()</span>
+
+<span class="c1"># Crear un pipeline con escalado de características</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>  <span class="c1"># Escalar características</span>
+    <span class="p">(</span><span class="s1">&#39;classifier&#39;</span><span class="p">,</span> <span class="n">clf</span><span class="p">)</span>  <span class="c1"># Clasificador MLPClassifier</span>
+<span class="p">])</span>
+
+<span class="c1"># Definir los hiperparámetros a ajustar en GridSearchCV para MLPClassifier</span>
+<span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;classifier__hidden_layer_sizes&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="mi">100</span><span class="p">,),</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)],</span>  <span class="c1"># Tamaños de las capas ocultas</span>
+    <span class="s1">&#39;classifier__alpha&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">],</span>  <span class="c1"># Parámetro de regularización alpha</span>
+<span class="p">}</span>
+
+<span class="c1"># Configurar GridSearchCV con validación cruzada</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">param_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;roc_auc&#39;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Ajustar el modelo</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Obtener las mejores métricas y el mejor modelo</span>
+<span class="n">best_clf</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">best_estimator_</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">best_clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">y_pred_prob</span> <span class="o">=</span> <span class="n">best_clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1">#Calcular matriz de confucion</span>
+<span class="n">confusion</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
+
+<span class="c1"># Métricas de rendimiento</span>
+<span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">f1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">precision_recall_fscore_support</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span><span class="p">)</span>
+<span class="n">auc_score_MLP</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_prob</span><span class="p">)</span>
+
+<span class="c1"># Imprimir las métricas</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriz de Confusión:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mejor Modelo MLPClassifier&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Precisión: </span><span class="si">{</span><span class="n">precision</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Recall: </span><span class="si">{</span><span class="n">recall</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;F1-Score: </span><span class="si">{</span><span class="n">f1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AUC: </span><span class="si">{</span><span class="n">auc_score_MLP</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriz de Confusión:
+[[3896    6]
+ [  79   19]]
+Mejor Modelo MLPClassifier
+Precisión: 0.76
+Recall: 0.19387755102040816
+F1-Score: 0.30894308943089427
+AUC: 0.7491710164332263
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#llamo todos los modelos para maximizar UAC como lo indica el parcial</span>
+<span class="n">modelos_AUC</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;K-NN&quot;</span><span class="p">:</span> <span class="n">auc_score_KNN</span><span class="p">,</span>
+    <span class="s2">&quot;Lasso&quot;</span><span class="p">:</span> <span class="n">auc_score_Lasso</span><span class="p">,</span>
+    <span class="s2">&quot;Bayes&quot;</span><span class="p">:</span> <span class="n">auc_score_Bayes</span><span class="p">,</span>
+    <span class="s2">&quot;XGBoost&quot;</span><span class="p">:</span> <span class="n">auc_score_XGBoost</span><span class="p">,</span>
+    <span class="s2">&quot;SVM&quot;</span><span class="p">:</span> <span class="n">auc_score_SVC</span><span class="p">,</span>
+    <span class="s2">&quot;MLP&quot;</span><span class="p">:</span> <span class="n">auc_score_MLP</span>
+<span class="p">}</span>
+
+<span class="n">mejor_modelo</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">modelos_AUC</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">modelos_AUC</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+<span class="n">mejor_AUC</span> <span class="o">=</span> <span class="n">modelos_AUC</span><span class="p">[</span><span class="n">mejor_modelo</span><span class="p">]</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mejor modelo es : </span><span class="si">{</span><span class="n">mejor_modelo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AUC Promedio del mejor modelo es : </span><span class="si">{</span><span class="n">mejor_AUC</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mejor modelo es : XGBoost
+AUC Promedio del mejor modelo es : 0.8492322095419409
+</pre></div>
+</div>
+</div>
+</div>
+<section id="el-valor-de-auc-es-una-medida-que-nos-dice-cuan-bien-un-modelo-puede-distinguir-entre-dos-clases-diferentes-en-este-caso-entre-las-predicciones-correctas-y-las-incorrectas-cuanto-mas-alto-sea-el-valor-de-auc-mejor-sera-el-modelo-para-hacer-estas-distinciones">
+<h3>El valor de AUC es una medida que nos dice cuán bien un modelo puede distinguir entre dos clases diferentes, en este caso, entre las predicciones correctas y las incorrectas. Cuanto más alto sea el valor de AUC, mejor será el modelo para hacer estas distinciones.<a class="headerlink" href="#el-valor-de-auc-es-una-medida-que-nos-dice-cuan-bien-un-modelo-puede-distinguir-entre-dos-clases-diferentes-en-este-caso-entre-las-predicciones-correctas-y-las-incorrectas-cuanto-mas-alto-sea-el-valor-de-auc-mejor-sera-el-modelo-para-hacer-estas-distinciones" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="xgboost-tiene-un-auc-promedio-del-mejor-modelo-es-0-849-estamos-diciendo-que-xgboost-es-el-mejor-para-hacer-estas-distinciones">
+<h3>XGBoost tiene un “AUC Promedio del mejor modelo es : 0.849”, estamos diciendo que XGBoost es el mejor para hacer estas distinciones<a class="headerlink" href="#xgboost-tiene-un-auc-promedio-del-mejor-modelo-es-0-849-estamos-diciendo-que-xgboost-es-el-mejor-para-hacer-estas-distinciones" title="Permalink to this heading">#</a></h3>
+<p>Ejercicio #6</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Lasso</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span><span class="p">,</span><span class="n">r2_score</span><span class="p">,</span><span class="n">mean_absolute_percentage_error</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wind</span> <span class="o">=</span> <span class="n">df_traing_wind</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#filtro columas que sean solo numericos, y despues elimino los Null</span>
+<span class="n">df_wind_numerico</span> <span class="o">=</span> <span class="n">df_wind</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;number&#39;</span><span class="p">])</span>
+<span class="n">df_wind</span> <span class="o">=</span> <span class="n">df_wind_numerico</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dividir tus datos en conjuntos de entrenamiento y prueba</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df_wind</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;VENTO, VELOCIDADE HORARIA (m/s)&#39;</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df_wind</span><span class="p">[</span><span class="s1">&#39;VENTO, VELOCIDADE HORARIA (m/s)&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Manejo de valores faltantes </span>
+<span class="n">X</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">X</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>  <span class="c1"># No asegiramos que Y tiene los mismos valores de x</span>
+
+<span class="c1"># Escalado de características</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># División en conjuntos de entrenamiento y prueba</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Verificamos los valores</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X_train shape:&quot;</span><span class="p">,</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y_train shape:&quot;</span><span class="p">,</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X_train shape: (70154, 11)
+y_train shape: (70154,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calcular el número de ventanas o instancias basado en la longitud del DataFrame</span>
+<span class="n">num_ventanas</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_wind</span><span class="p">)</span> <span class="o">//</span> <span class="mi">24</span>
+
+<span class="c1"># Inicializar listas para almacenar los errores RMSE de cada ventana</span>
+<span class="n">rmse_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Inicializar listas para almacenar las métricas de cada ventana para Linear Regression y los demas modelos</span>
+<span class="n">rmse_lr_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mape_lr_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">r2_lr_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">rmse_model_ventanas</span> <span class="o">=</span> <span class="p">[]</span>  
+<span class="n">mape_model_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">r2_model_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Modelo de K-NN</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear un ciclo for para recorrer las ventanas de datos</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_ventanas</span><span class="p">):</span>
+    <span class="c1"># Definir el inicio y el fin de acuerdo el maximo valor de iteraciones</span>
+    <span class="n">inicio</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">24</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">24</span>
+    
+    <span class="c1"># Dividir los datos en entrenamiento y validación para esta ventana</span>
+    <span class="n">X_train</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+    <span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+    <span class="n">X_val</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">fin</span><span class="p">:</span><span class="n">fin</span> <span class="o">+</span> <span class="mi">24</span><span class="p">]</span>
+    <span class="n">y_val</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">fin</span><span class="p">:</span><span class="n">fin</span> <span class="o">+</span> <span class="mi">24</span><span class="p">]</span>
+    
+    <span class="c1"># Crear y entrenar un modelo K-NN </span>
+    <span class="n">knn_model</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  
+    <span class="n">knn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    
+    <span class="c1"># Realizar predicciones en el conjunto de validación para K-NN</span>
+    <span class="n">y_pred_knn</span> <span class="o">=</span> <span class="n">knn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span>
+    
+    <span class="c1"># Calcular las métricas para K-NN y almacenarlas en las listas correspondientes</span>
+    <span class="n">rmse_knn_ventana</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred_knn</span><span class="p">))</span>
+    <span class="n">mape_knn_ventana</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">((</span><span class="n">y_val</span> <span class="o">-</span> <span class="n">y_pred_knn</span><span class="p">)</span> <span class="o">/</span> <span class="n">y_val</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">r2_knn_ventana</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred_knn</span><span class="p">)</span>
+    
+    <span class="n">rmse_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmse_knn_ventana</span><span class="p">)</span>
+    <span class="n">mape_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mape_knn_ventana</span><span class="p">)</span>
+    <span class="n">r2_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r2_knn_ventana</span><span class="p">)</span>
+
+<span class="c1"># Calcular las métricas promedio para K-NN</span>
+<span class="n">rmse_knn_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">rmse_model_ventanas</span><span class="p">)</span>
+<span class="n">mape_knn_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mape_model_ventanas</span><span class="p">)</span>
+<span class="n">r2_knn_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">r2_model_ventanas</span><span class="p">)</span>
+
+<span class="c1"># Imprimir las métricas promedio para K-NN</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Métricas Promedio para K-NN:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE Promedio (K-NN): </span><span class="si">{</span><span class="n">rmse_knn_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MAPE Promedio (K-NN): </span><span class="si">{</span><span class="n">mape_knn_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R2 Promedio (K-NN): </span><span class="si">{</span><span class="n">r2_knn_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Métricas Promedio para K-NN:
+RMSE Promedio (K-NN): 1.1617266575777492
+MAPE Promedio (K-NN): inf
+R2 Promedio (K-NN): -0.5030865072198051
+</pre></div>
+</div>
+</div>
+</div>
+<p>Modelo de Ridge</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear un ciclo for para recorrer las ventanas de datos</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_ventanas</span><span class="p">):</span>
+    <span class="c1"># Definir los índices de inicio y fin para esta ventana</span>
+    <span class="n">inicio</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">24</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">24</span>
+    
+    <span class="c1"># Dividir los datos en entrenamiento y validación para esta ventana</span>
+    <span class="n">X_train</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+    <span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+    <span class="n">X_val</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">fin</span><span class="p">:</span><span class="n">fin</span> <span class="o">+</span> <span class="mi">24</span><span class="p">]</span>
+    <span class="n">y_val</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">fin</span><span class="p">:</span><span class="n">fin</span> <span class="o">+</span> <span class="mi">24</span><span class="p">]</span>
+    
+    <span class="c1"># Crear y entrenar un modelo de regresión lineal para esta ventana</span>
+    <span class="n">lr_model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+    <span class="n">lr_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    
+    <span class="c1"># Crear y entrenar un modelo de regresión Ridge para esta ventana</span>
+    <span class="n">ridge_model</span> <span class="o">=</span> <span class="n">Ridge</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span> 
+    <span class="n">ridge_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    
+    <span class="c1"># Realizar predicciones en el conjunto de validación para Linear Regression</span>
+    <span class="n">y_pred_lr</span> <span class="o">=</span> <span class="n">lr_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span>
+    
+    <span class="c1"># Realizar predicciones en el conjunto de validación para Ridge</span>
+    <span class="n">y_pred_ridge</span> <span class="o">=</span> <span class="n">ridge_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span>
+    
+    <span class="c1"># Calcular las métricas para Linear Regression y se almacena en la listas correspondientes</span>
+    <span class="n">rmse_lr_ventana</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred_lr</span><span class="p">))</span>
+    <span class="n">mape_lr_ventana</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">((</span><span class="n">y_val</span> <span class="o">-</span> <span class="n">y_pred_lr</span><span class="p">)</span> <span class="o">/</span> <span class="n">y_val</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">r2_lr_ventana</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred_lr</span><span class="p">)</span>
+    
+    <span class="n">rmse_lr_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmse_lr_ventana</span><span class="p">)</span>
+    <span class="n">mape_lr_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mape_lr_ventana</span><span class="p">)</span>
+    <span class="n">r2_lr_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r2_lr_ventana</span><span class="p">)</span>
+    
+    <span class="c1"># Calcular las métricas para Ridge y almacenarlas en las listas correspondientes</span>
+    <span class="n">rmse_ridge_ventana</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred_ridge</span><span class="p">))</span>
+    <span class="n">mape_ridge_ventana</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">((</span><span class="n">y_val</span> <span class="o">-</span> <span class="n">y_pred_ridge</span><span class="p">)</span> <span class="o">/</span> <span class="n">y_val</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">r2_ridge_ventana</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred_ridge</span><span class="p">)</span>
+    
+    <span class="n">rmse_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmse_ridge_ventana</span><span class="p">)</span>
+    <span class="n">mape_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mape_ridge_ventana</span><span class="p">)</span>
+    <span class="n">r2_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r2_ridge_ventana</span><span class="p">)</span>
+
+<span class="c1"># Calcular las métricas promedio para Linear Regression</span>
+<span class="n">rmse_lr_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">rmse_lr_ventanas</span><span class="p">)</span>
+<span class="n">mape_lr_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mape_lr_ventanas</span><span class="p">)</span>
+<span class="n">r2_lr_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">r2_lr_ventanas</span><span class="p">)</span>
+
+<span class="c1"># Calcular las métricas promedio para Ridge</span>
+<span class="n">rmse_ridge_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">rmse_model_ventanas</span><span class="p">)</span>
+<span class="n">mape_ridge_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mape_model_ventanas</span><span class="p">)</span>
+<span class="n">r2_ridge_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">r2_model_ventanas</span><span class="p">)</span>
+
+<span class="c1"># Imprimir las métricas promedio para Ridge</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Métricas Promedio para Ridge:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE Promedio (Ridge): </span><span class="si">{</span><span class="n">rmse_ridge_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MAPE Promedio (Ridge): </span><span class="si">{</span><span class="n">mape_ridge_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R2 Promedio (Ridge): </span><span class="si">{</span><span class="n">r2_ridge_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Métricas Promedio para Ridge:
+RMSE Promedio (Ridge): 1.0076292165547664
+MAPE Promedio (Ridge): inf
+R2 Promedio (Ridge): -0.23976279196114045
+</pre></div>
+</div>
+</div>
+</div>
+<p>Modelo de Lasso</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear un ciclo for para recorrer las ventanas de datos</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_ventanas</span><span class="p">):</span>
+    <span class="c1"># Definir los índices de inicio y fin para esta ventana</span>
+    <span class="n">inicio</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">24</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">24</span>
+    
+    <span class="c1"># Dividir los datos en entrenamiento y validación para esta ventana</span>
+    <span class="n">X_train</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+    <span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+    <span class="n">X_val</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">fin</span><span class="p">:</span><span class="n">fin</span> <span class="o">+</span> <span class="mi">24</span><span class="p">]</span>
+    <span class="n">y_val</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">fin</span><span class="p">:</span><span class="n">fin</span> <span class="o">+</span> <span class="mi">24</span><span class="p">]</span>
+    
+    <span class="c1"># Crear y entrenar un modelo de regresión Lasso para esta ventana</span>
+    <span class="n">lasso_model</span> <span class="o">=</span> <span class="n">Lasso</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>  <span class="c1"># Ajusta el valor de alpha según tus necesidades</span>
+    <span class="n">lasso_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    
+    <span class="c1"># Realizar predicciones en el conjunto de validación</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">lasso_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span>
+    
+    <span class="c1"># Calcular las métricas RMSE, MAPE y R^2 para esta ventana y almacenarlas en las listas correspondientes</span>
+    <span class="n">rmse_ventana</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+    <span class="n">mape_ventana</span> <span class="o">=</span> <span class="n">mean_absolute_percentage_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">r2_ventana</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    
+    <span class="n">rmse_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmse_ventana</span><span class="p">)</span>
+    <span class="n">mape_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mape_ventana</span><span class="p">)</span>
+    <span class="n">r2_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r2_ventana</span><span class="p">)</span>
+
+<span class="c1"># Calcular el promedio de las métricas de todas las ventanas para Lasso</span>
+<span class="n">rmse_lasso_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">rmse_model_ventanas</span><span class="p">)</span>
+<span class="n">mape_lasso_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mape_model_ventanas</span><span class="p">)</span>
+<span class="n">r2_lasso_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">r2_model_ventanas</span><span class="p">)</span>
+
+<span class="c1"># Imprimir las métricas promedio para Lasso</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE Promedio (Lasso): </span><span class="si">{</span><span class="n">rmse_lasso_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MAPE Promedio (Lasso): </span><span class="si">{</span><span class="n">mape_lasso_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R^2 Promedio (Lasso): </span><span class="si">{</span><span class="n">r2_lasso_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RMSE Promedio (Lasso): 1.0259991189139328
+MAPE Promedio (Lasso): inf
+R^2 Promedio (Lasso): -0.2539475641096277
+</pre></div>
+</div>
+</div>
+</div>
+<p>Modelo xgboost</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xgboost</span> <span class="k">as</span> <span class="nn">xgb</span>
+
+<span class="c1"># Inicializar listas para almacenar las métricas de cada ventana para XGBoost y los demás modelos</span>
+<span class="n">rmse_xgb_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mape_xgb_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">r2_xgb_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">rmse_model_ventanas</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># Agrega listas similares para K-NN</span>
+<span class="n">mape_model_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">r2_model_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Crear un ciclo for para recorrer las ventanas de datos</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_ventanas</span><span class="p">):</span>
+    <span class="c1"># Definir los índices de inicio y fin para esta ventana</span>
+    <span class="n">inicio</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">24</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">24</span>
+    
+    <span class="c1"># Dividir los datos en entrenamiento y validación para esta ventana</span>
+    <span class="n">X_train</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+    <span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+    <span class="n">X_val</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">fin</span><span class="p">:</span><span class="n">fin</span> <span class="o">+</span> <span class="mi">24</span><span class="p">]</span>
+    <span class="n">y_val</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">fin</span><span class="p">:</span><span class="n">fin</span> <span class="o">+</span> <span class="mi">24</span><span class="p">]</span>
+    
+    <span class="c1"># Crear y entrenar un modelo de regresión XGBoost para esta ventana</span>
+    <span class="n">xgb_model</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">XGBRegressor</span><span class="p">()</span>
+    <span class="n">xgb_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    
+    <span class="c1"># Realizar predicciones en el conjunto de validación</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">xgb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span>
+    
+    <span class="c1"># Calcular las métricas RMSE, MAPE y R^2 para esta ventana y almacenarlas en las listas correspondientes</span>
+    <span class="n">rmse_ventana</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+    <span class="n">mape_ventana</span> <span class="o">=</span> <span class="n">mean_absolute_percentage_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">r2_ventana</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    
+    <span class="n">rmse_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmse_ventana</span><span class="p">)</span>
+    <span class="n">mape_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mape_ventana</span><span class="p">)</span>
+    <span class="n">r2_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r2_ventana</span><span class="p">)</span>
+
+<span class="c1"># Calcular el promedio de las métricas de todas las ventanas para XGBoost</span>
+<span class="n">rmse_xgb_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">rmse_model_ventanas</span><span class="p">)</span>
+<span class="n">mape_xgb_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mape_model_ventanas</span><span class="p">)</span>
+<span class="n">r2_xgb_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">r2_model_ventanas</span><span class="p">)</span>
+
+<span class="c1"># Imprimir las métricas promedio para XGBoost</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE Promedio (XGBoost): </span><span class="si">{</span><span class="n">rmse_xgb_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MAPE Promedio (XGBoost): </span><span class="si">{</span><span class="n">mape_xgb_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R^2 Promedio (XGBoost): </span><span class="si">{</span><span class="n">r2_xgb_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RMSE Promedio (XGBoost): 0.9281961585708841
+MAPE Promedio (XGBoost): 127523887331997.05
+R^2 Promedio (XGBoost): 0.03528777508653811
+</pre></div>
+</div>
+</div>
+</div>
+<p>Modelo SVM</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVR</span>
+
+<span class="c1"># Inicializar listas para almacenar las métricas de cada ventana para SVM y los demás modelos</span>
+<span class="n">rmse_svm_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mape_svm_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">r2_svm_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Crear un ciclo for para recorrer las ventanas de datos</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_ventanas</span><span class="p">):</span>
+    <span class="c1"># Definir los índices de inicio y fin para esta ventana</span>
+    <span class="n">inicio</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">24</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">24</span>
+    
+    <span class="c1"># Dividir los datos en entrenamiento y validación para esta ventana</span>
+    <span class="n">X_train</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+    <span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+    <span class="n">X_val</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">fin</span><span class="p">:</span><span class="n">fin</span> <span class="o">+</span> <span class="mi">24</span><span class="p">]</span>
+    <span class="n">y_val</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">fin</span><span class="p">:</span><span class="n">fin</span> <span class="o">+</span> <span class="mi">24</span><span class="p">]</span>
+    
+    <span class="c1"># Crear y entrenar un modelo SVM para esta ventana</span>
+    <span class="n">svm_model</span> <span class="o">=</span> <span class="n">SVR</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;rbf&#39;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>  <span class="c1"># Puedes ajustar los hiperparámetros según tus necesidades</span>
+    <span class="n">svm_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    
+    <span class="c1"># Realizar predicciones en el conjunto de validación</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">svm_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span>
+    
+    <span class="c1"># Calcular las métricas RMSE, MAPE y R^2 para esta ventana y almacenarlas en las listas correspondientes</span>
+    <span class="n">rmse_ventana</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+    <span class="n">mape_ventana</span> <span class="o">=</span> <span class="n">mean_absolute_percentage_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">r2_ventana</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    
+    <span class="n">rmse_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmse_ventana</span><span class="p">)</span>
+    <span class="n">mape_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mape_ventana</span><span class="p">)</span>
+    <span class="n">r2_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r2_ventana</span><span class="p">)</span>
+
+<span class="c1"># Calcular el promedio de las métricas de todas las ventanas para SVM</span>
+<span class="n">rmse_svm_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">rmse_model_ventanas</span><span class="p">)</span>
+<span class="n">mape_svm_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mape_model_ventanas</span><span class="p">)</span>
+<span class="n">r2_svm_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">r2_model_ventanas</span><span class="p">)</span>
+
+<span class="c1"># Imprimir las métricas promedio para SVM</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE Promedio (SVM): </span><span class="si">{</span><span class="n">rmse_svm_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MAPE Promedio (SVM): </span><span class="si">{</span><span class="n">mape_svm_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R^2 Promedio (SVM): </span><span class="si">{</span><span class="n">r2_svm_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RMSE Promedio (SVM): 1.0775394956847735
+MAPE Promedio (SVM): 171953570152378.28
+R^2 Promedio (SVM): -0.2570967980686505
+</pre></div>
+</div>
+</div>
+</div>
+<p>Modelo MLP</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neural_network</span> <span class="kn">import</span> <span class="n">MLPRegressor</span>
+
+<span class="c1"># Inicializar listas para almacenar las métricas de cada ventana para MLP y los demás modelos</span>
+<span class="n">rmse_mlp_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mape_mlp_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">r2_mlp_ventanas</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Crear un ciclo for para recorrer las ventanas de datos</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_ventanas</span><span class="p">):</span>
+    <span class="c1"># Definir los índices de inicio y fin para esta ventana</span>
+    <span class="n">inicio</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">24</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">24</span>
+    
+    <span class="c1"># Dividir los datos en entrenamiento y validación para esta ventana</span>
+    <span class="n">X_train</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+    <span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">inicio</span><span class="p">:</span><span class="n">fin</span><span class="p">]</span>
+    <span class="n">X_val</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">fin</span><span class="p">:</span><span class="n">fin</span> <span class="o">+</span> <span class="mi">24</span><span class="p">]</span>
+    <span class="n">y_val</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">fin</span><span class="p">:</span><span class="n">fin</span> <span class="o">+</span> <span class="mi">24</span><span class="p">]</span>
+    
+    <span class="c1"># Crear y entrenar un modelo MLP para esta ventana</span>
+    <span class="n">mlp_model</span> <span class="o">=</span> <span class="n">MLPRegressor</span><span class="p">(</span><span class="n">hidden_layer_sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>  
+    <span class="c1"># Puedes ajustar los hiperparámetros según tus necesidades</span>
+    <span class="n">mlp_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    
+    <span class="c1"># Realizar predicciones en el conjunto de validación</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">mlp_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span>
+    
+    <span class="c1"># Calcular las métricas RMSE, MAPE y R^2 para esta ventana y almacenarlas en las listas correspondientes</span>
+    <span class="n">rmse_ventana</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+    <span class="n">mape_ventana</span> <span class="o">=</span> <span class="n">mean_absolute_percentage_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="n">r2_ventana</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    
+    <span class="n">rmse_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rmse_ventana</span><span class="p">)</span>
+    <span class="n">mape_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mape_ventana</span><span class="p">)</span>
+    <span class="n">r2_model_ventanas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r2_ventana</span><span class="p">)</span>
+
+<span class="c1"># Calcular el promedio de las métricas de todas las ventanas para MLP</span>
+<span class="n">rmse_mlp_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">rmse_model_ventanas</span><span class="p">)</span>
+<span class="n">mape_mlp_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mape_model_ventanas</span><span class="p">)</span>
+<span class="n">r2_mlp_promedio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">r2_model_ventanas</span><span class="p">)</span>
+
+<span class="c1"># Imprimir las métricas promedio para MLP</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE Promedio (MLP): </span><span class="si">{</span><span class="n">rmse_mlp_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MAPE Promedio (MLP): </span><span class="si">{</span><span class="n">mape_mlp_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R^2 Promedio (MLP): </span><span class="si">{</span><span class="n">r2_mlp_promedio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RMSE Promedio (MLP): 5.591610360202331
+MAPE Promedio (MLP): 637822164600439.4
+R^2 Promedio (MLP): -182.3954434763258
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#llamo todos los modelos para seleccionar el minimo RMSE como lo indica el parcial</span>
+<span class="n">modelos_rmse</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;K-NN&quot;</span><span class="p">:</span> <span class="n">rmse_knn_promedio</span><span class="p">,</span>
+    <span class="s2">&quot;Ridge&quot;</span><span class="p">:</span> <span class="n">rmse_ridge_promedio</span><span class="p">,</span>
+    <span class="s2">&quot;Lasso&quot;</span><span class="p">:</span> <span class="n">rmse_lasso_promedio</span><span class="p">,</span>
+    <span class="s2">&quot;XGBoost&quot;</span><span class="p">:</span> <span class="n">rmse_xgb_promedio</span><span class="p">,</span>
+    <span class="s2">&quot;SVM&quot;</span><span class="p">:</span> <span class="n">rmse_svm_promedio</span><span class="p">,</span>
+    <span class="s2">&quot;MLP&quot;</span><span class="p">:</span> <span class="n">rmse_mlp_promedio</span>
+<span class="p">}</span>
+
+<span class="n">mejor_modelo</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">modelos_rmse</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">modelos_rmse</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+<span class="n">mejor_rmse</span> <span class="o">=</span> <span class="n">modelos_rmse</span><span class="p">[</span><span class="n">mejor_modelo</span><span class="p">]</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mejor modelo es : </span><span class="si">{</span><span class="n">mejor_modelo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE Promedio del mejor modelo es : </span><span class="si">{</span><span class="n">mejor_rmse</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mejor modelo es : XGBoost
+RMSE Promedio del mejor modelo es : 0.9281961585708841
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="cuanto-menor-sea-el-valor-del-rmse-mejor-sera-la-capacidad-del-modelo-para-hacer-predicciones-precisas-en-este-caso-un-rmse-promedio-de-0-9282">
+<h3>Cuanto menor sea el valor del RMSE, mejor será la capacidad del modelo para hacer predicciones precisas. En este caso, un RMSE Promedio de 0.9282<a class="headerlink" href="#cuanto-menor-sea-el-valor-del-rmse-mejor-sera-la-capacidad-del-modelo-para-hacer-predicciones-precisas-en-este-caso-un-rmse-promedio-de-0-9282" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="esto-significa-que-en-promedio-las-predicciones-del-modelo-xgboost-tienen-un-error-de-aproximadamente-0-9282-unidades-en-la-variable-objetivo-en-este-caso-la-velocidad-del-viento-en-metros-por-segundo">
+<h3>esto significa que en promedio, las predicciones del modelo XGBoost tienen un error de aproximadamente 0.9282 unidades en la variable objetivo (en este caso, la velocidad del viento en metros por segundo).<a class="headerlink" href="#esto-significa-que-en-promedio-las-predicciones-del-modelo-xgboost-tienen-un-error-de-aproximadamente-0-9282-unidades-en-la-variable-objetivo-en-este-caso-la-velocidad-del-viento-en-metros-por-segundo" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Parcial ML</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jose-montalvo">Jose Montalvo</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtrar-50-000-lineas-por-rendimiento-llevaba-aprox-20-min-por-modelo">Filtrar 50.000 lineas por rendimiento. llevaba aprox 20 min por modelo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-valor-de-auc-es-una-medida-que-nos-dice-cuan-bien-un-modelo-puede-distinguir-entre-dos-clases-diferentes-en-este-caso-entre-las-predicciones-correctas-y-las-incorrectas-cuanto-mas-alto-sea-el-valor-de-auc-mejor-sera-el-modelo-para-hacer-estas-distinciones">El valor de AUC es una medida que nos dice cuán bien un modelo puede distinguir entre dos clases diferentes, en este caso, entre las predicciones correctas y las incorrectas. Cuanto más alto sea el valor de AUC, mejor será el modelo para hacer estas distinciones.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-tiene-un-auc-promedio-del-mejor-modelo-es-0-849-estamos-diciendo-que-xgboost-es-el-mejor-para-hacer-estas-distinciones">XGBoost tiene un “AUC Promedio del mejor modelo es : 0.849”, estamos diciendo que XGBoost es el mejor para hacer estas distinciones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuanto-menor-sea-el-valor-del-rmse-mejor-sera-la-capacidad-del-modelo-para-hacer-predicciones-precisas-en-este-caso-un-rmse-promedio-de-0-9282">Cuanto menor sea el valor del RMSE, mejor será la capacidad del modelo para hacer predicciones precisas. En este caso, un RMSE Promedio de 0.9282</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esto-significa-que-en-promedio-las-predicciones-del-modelo-xgboost-tienen-un-error-de-aproximadamente-0-9282-unidades-en-la-variable-objetivo-en-este-caso-la-velocidad-del-viento-en-metros-por-segundo">esto significa que en promedio, las predicciones del modelo XGBoost tienen un error de aproximadamente 0.9282 unidades en la variable objetivo (en este caso, la velocidad del viento en metros por segundo).</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
